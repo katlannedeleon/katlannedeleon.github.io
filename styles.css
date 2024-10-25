@@ -1,0 +1,182 @@
+body {
+    background-image: url('https://imgur.com/5mp05ja.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    padding-top: 120px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: rgba(70, 0, 1, 0.37);
+    border-color: rgba(255, 255, 255, 0.37); 
+    color: #ecf0f1; 
+    border-radius: 50%;
+    text-align: center;
+    line-height: 29px;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 10px;
+    box-shadow: none;
+    display: none; /* Hidden initially */
+    z-index: 1000; 
+}
+#scrollToTopBtn:hover {
+    background-color: rgba(255, 255, 255, 0.151); 
+    color: #460001; 
+    border-color: #460001; 
+    box-shadow: none
+}
+
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+.share-tech-mono-regular {
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+}  
+
+.righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    font-size: 20px;
+}
+
+.display-4 {
+    font-family: "Lobster", sans-serif;
+    font-size: 80px;
+    color: #e5ddd1;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 30px;
+    color: #e5ddd1;
+    padding-top: 120px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.custom-btn {
+    font-family: "Righteous", sans-serif;
+    font-size: 20px;
+    width: 180px;
+    margin-top: 10%;
+    border-color: rgba(255, 255, 255, 0.37);
+    background-color: rgba(70, 0, 1, 0.37); 
+    color: #ecf0f1; 
+    border-radius: 10px; 
+    box-sizing: none;
+    padding: 10px 20px; 
+    transition: background-color 0.3s; 
+    outline: none;
+}
+
+.custom-btn:hover {
+    background-color: rgba(255, 255, 255, 0.151);
+    color: #460001; 
+    border-color: #460001; 
+    box-shadow: none;
+}
+
+p {
+    font-family: "Share Tech Mono", monospace;
+    color: #e5ddd1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(70, 0, 1, 0.568) !important;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    font-size: 20px;
+    display: flex;
+    margin-left: 80%; 
+}
+.navbar-brand {
+    font-family: "Righteous", sans-serif;
+    font-size: 20px;
+}
+
+.card {
+    width: auto;
+    height: auto;
+    margin: 10px auto 20px; 
+    background-color: rgba(70, 0, 1, 0.37);
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+.card img {
+    width: 95%;     
+    height: 195px;  
+    border-radius: 10px;
+    max-width: 100%;
+    margin-top: 10px;
+    margin: 15px auto; 
+    display: block;
+}
+
+.card-title {
+    font-family: "Righteous", sans-serif;
+    font-size: 20px;
+}
+
+.btn-outline-dark {
+    font-family: "Righteous", sans-serif;
+    font-size: 20px; 
+    width: 180px;
+    margin-top: 10%;
+    border-color: rgba(255, 255, 255, 0.37); 
+    background-color: rgba(70, 0, 1, 0.37);
+    color: #ecf0f1; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+    padding: 10px 20px;
+    transition: background-color 0.3s, border-color 0.3s; 
+    outline: none;
+    box-shadow: none; 
+}
+
+/* Hover State */
+.btn-outline-dark:hover {
+    background-color: rgba(255, 255, 255, 0.151); 
+    color: #460001; 
+    border-color: #460001; 
+    box-shadow: none; 
+}
+
+/* Focus and Active States */
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(70, 0, 1, 0.37); 
+    border-color: rgba(255, 255, 255, 0.37); 
+    color: #ecf0f1; 
+}
