@@ -1,0 +1,351 @@
+/* Body Styling */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-color: black;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 29px;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 10px;
+    box-shadow: none;
+    display: none;
+    z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(255, 255, 255, 0.151);
+    color: #460001;
+    border-color: #460001;
+    box-shadow: none;
+}
+
+.navbar {
+    position: fixed;
+    font-family: "Noto Sans JP", sans-serif;
+    width: 100%;
+    height: 50px;
+    background-color: maroon !important;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: "Yuji Syuku", serif;
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.nav-link.active {
+    color: black !important;
+}
+
+.video-background {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: 100%;
+    height: 100vh;  
+    overflow: hidden;
+    z-index: 0;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;  /* White text for contrast */
+    z-index: 1;  /* Ensure the overlay content is above the video */
+}
+
+.text-content {
+    font-size: 3em;
+    margin-top: 15%;
+}
+
+.display-4 {
+    font-family: "Stick", sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.lead {
+    font-family: "Yuji Syuku", serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.about-me {
+    padding-top: 75px;
+}
+
+.about-me img {
+    object-fit: fill;
+    width: 100%; /* Makes the image responsive to the container width */
+    height: 550px; /* Maintains the image's aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+}
+
+.custom-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+.custom-btn:hover {
+    background-color: white;
+    color: #460001;
+    transition: 0.3s;
+}
+
+.text-center {
+    font-family: "Yuji Syuku", serif;
+    padding-top: 70px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card {
+    width: 120%;
+    height: 500px;
+    margin: 20px auto 20px; 
+    background-color: white;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card img {
+    object-fit: cover;
+    height: 200px;
+    margin: 15px auto; 
+    display: block;
+    margin-top: -70px;
+}
+
+.card-title {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.btn-outline-dark {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 19px; 
+    width: 200px;
+    margin-top: 5%;
+    transition: background-color 0.3s, border-color 0.3s; 
+    outline: none;
+    box-shadow: black; 
+    background-color: maroon;
+    border: 2px solid white;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.btn-outline-dark:hover {
+    background-color: white;
+    color: #460001;
+    transition: 0.3s;
+}
+
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.modal-header {
+    background-color: maroon; 
+    color: white; 
+}
+
+.modal-dialog {
+    max-width: 80%; 
+    max-height: 90vh;
+    margin: 0 auto;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    overflow-y: auto; 
+    max-height: 70vh;
+}
+
+.modal-body h3 {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: bold;
+}
+
+.modal-title {
+    font-family: "Yuji Syuku", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body img {
+    width: 100%; 
+    height: 450px; 
+    object-fit: contain; 
+    margin-bottom: 15px; 
+    border-radius: 8px;
+}
+
+.btn-close {
+    background-color: transparent;
+    color: white; 
+    border: none;
+    z-index: 1050;
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.btn-close:active {
+    background-color: transparent; 
+}
+
+.row.justify-content-center {
+    gap: 60px; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image, 
+.spring-image, 
+.img-fluid {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;   
+}
+
+.gallery-image {
+    height: 1016px;
+}
+
+.spring-image {
+    height: 1057px;
+}
+
+.culture-image {
+    object-fit: cover;
+    height: 350px; /* Adjust the height */
+    width: 100%;   /* Ensure it fills the container */
+}
+
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: maroon;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .navbar-nav .nav-link {
+        margin-bottom: 5px;
+    }
+
+    .navbar-toggler {
+        margin-right: 3%;
+    }
+
+    .navbar-toggler:focus, 
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .text-content {
+        font-size: 3em;
+        margin-top: 30%;
+    }
+
+    .card {
+        width: 100%; /* Make card take up full width on smaller devices */
+        height: 500px;
+        margin: 10px auto; /* Adjust the margin to fit better */
+    }
+
+    #seasons h3 {
+        font-size: 1.5rem;  /* Smaller font size for mobile */
+        text-align: center; /* Center-align titles */
+        margin-top: 20px;
+    }
+
+    .culture-image {
+        height: 200px; /* Smaller height for mobile devices */
+    }
+
+}

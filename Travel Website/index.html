@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Japan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Yuji+Syuku&family=Noto+Sans+JP&family=Stick&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_up" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Japan</a>
+        <!-- Toggler button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#about-me">About</a>
+                    <a class="nav-link" href="#destinations">Destination</a>
+                    <a class="nav-link" href="#seasons">Seasons</a>
+                    <a class="nav-link" href="#culture">Culture</a>
+            </ul>
+        </div>
+    </nav>
+
+
+        <!-- Video Background Section -->
+    <section class="video-background">
+        <div class="video-container">
+            <video autoplay muted loop id="background-video" class="video-background">
+                <source src="background.mp4" type="video/mp4">
+            </video>
+
+            <!-- Title and Text Content -->
+            <div class="overlay">
+                <div class="text-content">
+                    <h1 class="display-4"><b>JAPAN</b></h1>
+                    <p>ようこそ、皆さん</p>
+                    <p class="lead">Discover the heart of Japan, where every corner tells a story,
+                        and every moment feels like an adventure waiting to unfold.</p>
+                    <a href="#about-me" class="btn custom-btn" id="AboutButton">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="about-me my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://i.pinimg.com/736x/c7/1a/53/c71a534abb1a07babef3f1514a3ce137.jpg" alt="About Me">
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-6">
+                    <h2 class="text-center"><b>About Japan</b></h2>
+                    <p class="description">Japan is a mesmerizing blend of ancient traditions and cutting-edge modernity, 
+                        where historic castles stand alongside towering skyscrapers. 
+                        Known for its seasonal beauty, from cherry blossoms in spring to autumn’s fiery leaves, 
+                        Japan offers a deep connection to nature and a reverence for its culture. 
+                        Visitors can experience everything from the quiet elegance of tea ceremonies to the lively energy of Tokyo’s bustling streets. 
+                        With its unique harmony of old and new, Japan offers unforgettable experiences at every turn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Destinations Section -->
+    <div class="container mt-5" id="destinations">
+        <h2 class="text-center"><b>Top Destinations</b></h2>
+        <div class="row justify-content-center">
+            <!-- Destination 1: Tokyo -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card mb-4 text-center">
+                    <div class="card-body">
+                        <img src="https://i.pinimg.com/736x/c1/2f/c5/c12fc5d5b0413a6158eacbb5d82e21da.jpg" class="card-img-top img-fluid" alt="Tokyo">
+                        <h3 class="card-title">Tokyo</h3>
+                        <p class="card-text">"A dazzling fusion of tradition and innovation, 
+                            offers an unforgettable journey through vibrant streets, 
+                            towering skyscrapers, and serene temples."</p>
+                        <!-- Trigger Button for Tokyo Modal -->
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#tokyoModal">
+                            View Images
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination 2: Osaka -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card mb-4 text-center">
+                    <div class="card-body">
+                        <img src="https://i.pinimg.com/736x/13/a7/3d/13a73dec655ae0ff2b04f64083b32aa9.jpg" class="card-img-top img-fluid" alt="Osaka">
+                        <h3 class="card-title">Osaka</h3>
+                        <p class="card-text">"Japan's kitchen and cultural hub, 
+                            invites you to savor bold flavors, warm hospitality, 
+                            and the lively spirit of its bustling streets."</p>
+                        <!-- Trigger Button for Osaka Modal -->
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#osakaModal">
+                            View Images
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination 3: Kyoto -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card mb-4 text-center">
+                    <div class="card-body">
+                        <img src="https://i.pinimg.com/736x/b4/19/4b/b4194b22c11a72bc5d7a1713d4766295.jpg" class="card-img-top img-fluid" alt="Kyoto">
+                        <h3 class="card-title">Kyoto</h3>
+                        <p class="card-text">"A city of timeless beauty, 
+                            invites you to immerse in Japan's ancient traditions, 
+                            serene temples, and breathtaking landscapes."</p>
+                        <!-- Trigger Button for Kyoto Modal -->
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#kyotoModal">
+                            View Images
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal for Tokyo -->
+    <div class="modal fade" id="tokyoModal" tabindex="-1" aria-labelledby="tokyoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="tokyoModalLabel">Tokyo's Best Place to Visit</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Image 1 -->
+                    <div class="col-12 mb-3">
+                        <h3>Senso-ji Temple</h3>
+                        <img src="https://i.pinimg.com/736x/6b/af/82/6baf82a13e033ea564cf9598dde9d9c2.jpg" class="img-fluid" alt="Tokyo Image 1">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="col-12 mb-3">
+                        <h3>Tokyo Tower</h3>
+                        <img src="https://i.pinimg.com/736x/a1/a6/96/a1a6967cbc3125021c03eb59c84753bc.jpg" class="img-fluid" alt="Tokyo Image 2">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="col-12 mb-3">
+                        <h3>Shibuya Crossing</h3>
+                        <img src="https://i.pinimg.com/736x/1e/0b/bf/1e0bbf90534371663cac5d42f8d7e0fc.jpg" class="img-fluid" alt="Tokyo Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Osaka -->
+    <div class="modal fade" id="osakaModal" tabindex="-1" aria-labelledby="osakaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="osakaModalLabel">Osaka's Best Place to Visit</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Image 1 -->
+                    <div class="col-12 mb-3">
+                        <h3>Dotonbori</h3>
+                        <img src="https://i.pinimg.com/736x/33/e0/76/33e0769ee26a7bc53233eea9fa380db2.jpg" class="img-fluid" alt="Osaka Image 1">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="col-12 mb-3">
+                        <h3>Kuromon Ichiba Market</h3>
+                        <img src="https://i.pinimg.com/736x/99/1f/0b/991f0b1ea69ec63d73fc64433a3eceba.jpg" class="img-fluid" alt="Osaka Image 2">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="col-12 mb-3">
+                        <h3>Osaka Castle</h3>
+                        <img src="https://i.pinimg.com/736x/9d/e4/50/9de45011eea9480667119c1d8fc5dee1.jpg" class="img-fluid" alt="Osaka Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Kyoto -->
+    <div class="modal fade" id="kyotoModal" tabindex="-1" aria-labelledby="kyotoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="kyotoModalLabel">Kyoto's Best Place to Visit</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Image 1 -->
+                    <div class="col-12 mb-3">
+                        <h3>Kinkaku-ji (Golden Pavilion)</h3>
+                        <img src="https://i.pinimg.com/736x/8f/05/ce/8f05ceaeff2c29b12601175456d493fc.jpg" class="img-fluid" alt="Kyoto Image 1">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="col-12 mb-3">
+                        <h3>Fushimi Inari Taisha</h3>
+                        <img src="https://i.pinimg.com/736x/f5/fa/61/f5fa61e674d64d43a1848b64f62ed57d.jpg" class="img-fluid" alt="Kyoto Image 2">
+                    </div> 
+                    <!-- Image 3 -->
+                    <div class="col-12 mb-3">
+                        <h3>Arashiyama Bamboo Grove</h3>
+                        <img src="https://i.pinimg.com/736x/c4/e1/34/c4e134beee498f1d7090ed16852aa470.jpg" class="img-fluid" alt="Kyoto Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Gallery -->
+    <section class="container my-5">
+        <div class="row">
+            <h2 class="col-12 text-center mb-4"></h2> <!-- Optional: Title for the gallery -->
+            
+            <!--  Image -->
+            <div class="col-md-6 mb-4">
+                <img src="https://i.pinimg.com/736x/c2/79/37/c27937f7b75d50ff1a69a7a629ddbea2.jpg" class="img-fluid gallery-image" alt="Image 1">
+            </div> 
+        
+            <!-- Stacked Images  -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <img src="https://i.pinimg.com/736x/39/a3/7e/39a37efbeed08fd96ec3ba1b33c988c1.jpg" class="img-fluid" alt="Image 2">
+                    </div>
+        
+                    <div class="col-12">
+                        <img src="https://i.pinimg.com/736x/3b/a8/08/3ba808f1ed83b5fc315af15bd7df6755.jpg" class="img-fluid" alt="Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Seasonal Section -->
+    <section class="container my-5" id="seasons">
+        <div class="row">
+            <h2 class="col-12 text-center mb-3"><b>Seasons</b></h2>
+
+            <!-- Left Column with Stacked Images (Winter and Autumn) -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- Winter Title and Image -->
+                    <h3 class="col-12">Winter</h3>
+                    <div class="col-12 mb-3">
+                        <img src="https://i.pinimg.com/736x/be/03/a5/be03a585905fb0119112c1332254cd44.jpg" class="img-fluid" style="object-fit: cover;" alt="Winter Image">
+                    </div>
+
+                    <!-- Autumn Title and Image -->
+                    <h3 class="col-12">Autumn</h3>
+                    <div class="col-12">
+                        <img src="https://i.pinimg.com/736x/95/16/8b/95168bc766d0469fc0f978105d799512.jpg" class="img-fluid" style="object-fit: cover;" alt="Autumn Image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column with One Large Image -->
+            <div class="col-md-6">
+                <h3>Spring</h3>
+                <img src="https://i.pinimg.com/736x/c6/fb/10/c6fb10183544b65584938398797b5ff4.jpg" class="img-fluid spring-image" style="object-fit: cover;" alt="Spring Image">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="culture" class="container my-5">
+        <h2 class="text-center mb-4"><b>Culture</b></h2>
+        <div class="row">
+            <!-- Column 1: Culture Image 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="https://i.pinimg.com/736x/68/06/db/6806db8571b9af4e52c2478a8a56f83a.jpg" class="img-fluid culture-image" alt="Culture Image 1" style="object-fit: cover; height: 300px;">
+            </div>
+            <!-- Column 2: Culture Text 1 -->
+            <div class="col-md-4 mb-4">
+                <p class="description">Japan has a rich and diverse cultural heritage, with traditions spanning thousands of years. 
+                    From ancient shrines to modern art museums, Japan offers a deep connection to both the old and the new. 
+                    Festivals like the cherry blossom viewing (hanami) and traditional tea ceremonies are just a glimpse into the spiritual and artistic side of the culture.</p>
+            </div>
+            <!-- Column 3: Culture Image 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="https://i.pinimg.com/736x/8d/df/42/8ddf42121b9cce073268a1a730a548e7.jpg" class="img-fluid culture-image" alt="Culture Image 2" style="object-fit: cover; height: 300px;">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Column 4: Culture Text 2 -->
+            <div class="col-md-4 mb-4">
+                <p class="description">The Japanese arts include calligraphy, ikebana (flower arrangement), and martial arts. 
+                    These practices are a perfect representation of the balance between mindfulness, tradition, and beauty. 
+                    The culture of Japan values both nature and craftsmanship, with respect for every detail that goes into a work of art or a custom.</p>
+            </div>
+            <!-- Column 5: Culture Image 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="https://i.pinimg.com/736x/3a/9f/1c/3a9f1cc7652a1167c26cabfc0f93d8f9.jpg" class="img-fluid culture-image" alt="Culture Image 3" style="object-fit: cover; height: 300px;">
+            </div>
+            <!-- Column 6: Culture Text 3 -->
+            <div class="col-md-4 mb-4">
+                <p class="description">Food also plays an essential role in Japanese culture, with sushi, ramen, and tempura being some of the iconic dishes. 
+                    The art of preparing food is held in high regard, emphasizing freshness, presentation, and seasonality. 
+                    Dining experiences in Japan are an opportunity to connect with the culture and the people.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="material-symbols-outlined">
+        keyboard_arrow_up
+    </button>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
