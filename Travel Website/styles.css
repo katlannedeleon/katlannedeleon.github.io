@@ -306,7 +306,7 @@ body {
     .card {
         width: 120%;
         height: 520px;
-        margin: 10px auto;
+        margin: 5px auto;
     }
 }
 
@@ -385,5 +385,5 @@ body {
     .culture-image {
         height: 200px;
     }
-
 }
+
