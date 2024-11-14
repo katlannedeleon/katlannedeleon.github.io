@@ -302,6 +302,36 @@ body {
     width: 100%;   /* Ensure it fills the container */
 }
 
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: maroon;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .navbar-nav .nav-link {
+        margin-bottom: 5px;
+    }
+
+    .navbar-toggler {
+        margin-right: 3%;
+    }
+
+    .navbar-toggler:focus, 
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .card {
+        width: 150%; /* Make card take up full width on smaller devices */
+        height: 550px;
+        margin: 10px auto;
+    }
+}
 
 @media (max-width: 767px) {
     .navbar-collapse {
