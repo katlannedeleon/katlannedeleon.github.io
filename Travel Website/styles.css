@@ -119,10 +119,10 @@ body {
 
 .about-me img {
     object-fit: fill;
-    width: 100%; /* Makes the image responsive to the container width */
-    height: 550px; /* Maintains the image's aspect ratio */
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+    width: 100%; 
+    height: 550px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .custom-btn {
@@ -298,8 +298,16 @@ body {
 
 .culture-image {
     object-fit: cover;
-    height: 350px; /* Adjust the height */
-    width: 100%;   /* Ensure it fills the container */
+    height: 350px; 
+    width: 100%;  
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 120%;
+        height: 520px;
+        margin: 10px auto;
+    }
 }
 
 @media (max-width: 992px) {
@@ -327,7 +335,7 @@ body {
     }
 
     .card {
-        width: 150%; /* Make card take up full width on smaller devices */
+        width: 150%; 
         height: 550px;
         margin: 10px auto;
     }
@@ -363,19 +371,19 @@ body {
     }
 
     .card {
-        width: 100%; /* Make card take up full width on smaller devices */
+        width: 100%;
         height: 500px;
-        margin: 10px auto; /* Adjust the margin to fit better */
+        margin: 10px auto;
     }
 
     #seasons h3 {
-        font-size: 1.5rem;  /* Smaller font size for mobile */
-        text-align: center; /* Center-align titles */
+        font-size: 1.5rem; 
+        text-align: center;
         margin-top: 20px;
     }
 
     .culture-image {
-        height: 200px; /* Smaller height for mobile devices */
+        height: 200px;
     }
 
 }
