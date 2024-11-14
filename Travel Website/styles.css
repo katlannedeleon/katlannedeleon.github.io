@@ -31,7 +31,7 @@ body {
     position: fixed;
     font-family: "Noto Sans JP", sans-serif;
     width: 100%;
-    height: 50px;
+    height: 57px;
     background-color: maroon !important;
     z-index: 1000;
 }
