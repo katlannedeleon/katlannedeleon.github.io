@@ -107,3 +107,36 @@ body {
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    body {
+        background-image: url(https://i.pinimg.com/736x/04/32/6e/04326ee30ed5ca2219ef14b1e67561cf.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .card {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .imgContainer {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 10px;
+    }
+
+    .btn-secondary {
+        width: 40%;
+        padding: 12px; 
+    }
+
+    .form-control {
+        width: 80%;
+        padding: 12px; 
+    }
+
+    text-container {
+        text-align: center;
+    }
+}
