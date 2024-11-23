@@ -94,5 +94,9 @@ h1 {
 @media (max-width: 480px) {
     body {
         background-image: url('https://pin.it/1LpKejg6k.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
     }
 }
