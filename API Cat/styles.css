@@ -93,10 +93,12 @@ h1 {
 
 @media (max-width: 480px) {
     body {
-        background-image: url('https://pin.it/1LpKejg6k.jpg');
+        background-image: url('https://i.pinimg.com/736x/04/32/6e/04326ee30ed5ca2219ef14b1e67561cf.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         min-height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 }
