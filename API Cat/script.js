@@ -1,33 +1,55 @@
-var catImage = document.getElementById("catImage");
-    var catBreed = document.getElementById("catBreed");
-    var catOrigin = document.getElementById("catOrigin");
-    var catDescription = document.getElementById("catDescription");
+// DOM Elements
+const searchBar = document.getElementById("searchBar");
+const catImage = document.getElementById("catImage");
+const catBreed = document.getElementById("catBreed");
+const catOrigin = document.getElementById("catOrigin");
+const catDescription = document.getElementById("catDescription");
+const resultCard = document.getElementById("resultCard");
 
-    const searchBreed = async () => {
-      const searchTerm = document.getElementById("searchBar").value.toLowerCase();
+// Function to search for cat breeds
+const searchBreed = async () => {
+    const searchTerm = searchBar.value.trim().toLowerCase();
 
-      // Fetch all cat breeds
-      const response = await fetch("https://api.thecatapi.com/v1/breeds");
-      const breeds = await response.json();
+    // Clear previous results and hide the result card
+    resultCard.classList.add("d-none");
+    catBreed.textContent = "Breed: ...";
+    catOrigin.textContent = "Origin: ...";
+    catDescription.textContent = "Description: ...";
+    catImage.src = "";
 
-      // Find the breed that matches the search term
-      const breed = breeds.find(b => b.name.toLowerCase().includes(searchTerm));
-
-      if (breed) {
-        // Fetch an image of the breed
-        const imageResponse = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${breed.id}`);
-        const imageData = await imageResponse.json();
-
-        // Update UI with breed information
-        catBreed.innerHTML = `Breed: ${breed.name}`;
-        catOrigin.innerHTML = `Origin: ${breed.origin}`;
-        catDescription.innerHTML = `Description: ${breed.description}`;
-        catImage.src = imageData[0].url;
-      } else {
-        // Handle case when breed is not found
-        catBreed.innerHTML = "Breed: Not Found";
-        catOrigin.innerHTML = "Origin: Unknown";
-        catDescription.innerHTML = "Description: No description available.";
-        catImage.src = "";
-      }
+    // Check if the search term is empty
+    if (!searchTerm) {
+        alert("Please enter a cat breed to search.");
+        return;
     }
+
+    try {
+        // Fetch all breeds
+        const response = await fetch("https://api.thecatapi.com/v1/breeds");
+        if (!response.ok) throw new Error("Failed to fetch breed data.");
+        const breeds = await response.json();
+
+        // Find matching breed
+        const breed = breeds.find(b => b.name.toLowerCase().includes(searchTerm));
+
+        if (breed) {
+            // Fetch image for the breed
+            const imageResponse = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${breed.id}`);
+            if (!imageResponse.ok) throw new Error("Failed to fetch image data.");
+            const imageData = await imageResponse.json();
+
+            // Populate result card
+            catBreed.textContent = `Breed: ${breed.name}`;
+            catOrigin.textContent = `Origin: ${breed.origin}`;
+            catDescription.textContent = `Description: ${breed.description}`;
+            catImage.src = imageData[0]?.url || "https://via.placeholder.com/150?text=No+Image";
+
+            // Display result card
+            resultCard.classList.remove("d-none");
+        } else {
+            alert("Breed not found. Please try another search.");
+        }
+    } catch (error) {
+        alert(`An error occurred: ${error.message}`);
+    }
+};
